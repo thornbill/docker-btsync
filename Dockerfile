@@ -2,9 +2,6 @@ FROM ubuntu
 
 MAINTAINER Bill Thornton <billt2006@gmail.com>
 
-# Add the config file
-ADD btsync.conf /etc/btsync.conf
-
 # Install curl
 RUN apt-get update && apt-get install -y curl
 # Download and extract the executable to /usr/bin
@@ -18,4 +15,3 @@ EXPOSE 55555
 
 ENTRYPOINT ["btsync"]
 CMD ["--config", "/btsync/btsync.conf", "--nodaemon"]
-
