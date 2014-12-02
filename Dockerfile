@@ -1,13 +1,9 @@
 # BitTorrent Sync
-# VERSION 0.1
+# VERSION 0.2
 
 FROM ubuntu:14.04
 
 MAINTAINER Bill Thornton <billt2006@gmail.com>
-
-# make sure the package repository is up to date
-RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
-RUN apt-get update
 
 # Download and extract the executable to /usr/bin
 ADD http://download-new.utorrent.com/endpoint/btsync/os/linux-x64/track/stable /usr/bin/btsync.tar.gz
